@@ -1,0 +1,42 @@
+{
+  "config_schema_version": 2,
+  "schedule": {
+    "mode": "interval",
+    "every": "7200s",
+    "on_boot_sec": "2min",
+    "persistent": true
+  },
+  "projects": [
+    {
+      "name": "my-laravel-app",
+      "project_path": "/var/www/html",
+      "ftp": {
+        "host": "127.0.0.1",
+        "port": 21,
+        "username": "ftp_user",
+        "password": "ftp_password",
+        "remote_path": "/backups/laravel",
+        "passive_mode": true,
+        "use_tls": false
+      },
+      "database": {
+        "driver": "mysql",
+        "host": "127.0.0.1",
+        "port": 3306,
+        "database": "laravel",
+        "username": "laravel",
+        "password": "secret"
+      },
+      "zip_excludes": [
+        "vendor",
+        "node_modules",
+        ".git",
+        "storage/logs",
+        "storage/framework/cache",
+        "storage/framework/sessions",
+        "storage/framework/views",
+        "bootstrap/cache"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+.DS_Store
+.history/
+.pycache
+.ruff_cache/
+.vscode/

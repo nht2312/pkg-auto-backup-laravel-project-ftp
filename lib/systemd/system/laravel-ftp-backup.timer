@@ -1,0 +1,11 @@
+[Unit]
+Description=Timer for Laravel FTP Backup
+Documentation=file:/usr/share/doc/laravel-ftp-backup/README.md
+
+[Timer]
+OnCalendar=daily
+Persistent=true
+RandomizedDelaySec=300
+
+[Install]
+WantedBy=timers.target

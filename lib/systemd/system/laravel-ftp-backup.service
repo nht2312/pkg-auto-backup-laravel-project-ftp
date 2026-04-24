@@ -1,0 +1,13 @@
+[Unit]
+Description=Laravel FTP Backup (oneshot)
+Documentation=file:/usr/share/doc/laravel-ftp-backup/README.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/lbf run
+StandardOutput=journal
+StandardError=journal
+# Do not fail the unit if config is missing; skip run cleanly
+ExecCondition=/usr/bin/test -f /etc/laravel-ftp-backup/config.json
