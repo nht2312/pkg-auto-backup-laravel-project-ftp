@@ -70,6 +70,7 @@ def warn_if_interval_too_short(data: dict[str, Any]) -> None:
             seconds,
         )
 
+
 CONFIG_PATH = Path("/etc/laravel-ftp-backup/config.json")
 DEFAULTS_CONFIG_PATH = Path(
     "/usr/share/doc/laravel-ftp-backup/examples/config.json"
@@ -170,6 +171,7 @@ def schedule_to_timer_ini(schedule: dict[str, Any]) -> str:
     mode = schedule.get("mode", "calendar")
     lines = ["[Timer]"]
     if mode == "interval":
+
         def normalize_systemd_timespan(ts: str) -> str:
             """Normalize common shorthand to a plain seconds-based systemd time span.
 

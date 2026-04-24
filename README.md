@@ -10,6 +10,7 @@ Runs in the background with `systemd timer` and continues after reboot.
 - Dump DB: MySQL/MariaDB, PostgreSQL, SQLite
 - Upload to FTP per run with a detailed timestamp folder
 - Flexible scheduling via `OnCalendar` or `OnUnitActiveSec`
+- Co-exists with `laravel-telegram-backup` on the same machine (no shared package paths)
 
 ## Quick Install for End Users
 

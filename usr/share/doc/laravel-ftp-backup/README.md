@@ -1,6 +1,7 @@
 # laravel-ftp-backup
 
 Định kỳ backup source Laravel (zip) và dump database, sau đó upload lên FTP.
+Package này chạy độc lập và có thể cài song song với `laravel-telegram-backup`.
 
 ## Cài nhanh
 
